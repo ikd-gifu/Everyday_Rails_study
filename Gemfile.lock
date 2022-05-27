@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/teamcapybara/capybara.git
-  revision: d05ae5c595bb60237629f710ae33cb63ed4a7790
+  revision: d08e88dadd44b7572b1ae37f44649d42180e8000
   specs:
-    capybara (3.36.0)
+    capybara (3.37.1)
       addressable
       matrix
       mini_mime (>= 0.1.3)
@@ -162,7 +162,7 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.4)
+    nokogiri (1.13.6)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -200,7 +200,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
-    regexp_parser (2.3.0)
+    regexp_parser (2.4.0)
     reline (0.3.1)
       io-console (~> 0.5)
     responders (3.0.1)
