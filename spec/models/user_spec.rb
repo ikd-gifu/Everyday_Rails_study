@@ -29,14 +29,14 @@ describe User do
 
   # 重複したメールアドレスなら無効な状態であること
   it "is invalid with a duplicate email address" do
-    # FactoryBot.create(:user,
-    #   email:      "aaron@example.com"
-    # )
-    # user = FactoryBot.build(:user,
-    #   email:      "aaron@example.com",
-    # )
-    FactoryBot.create(:user)
-    user = FactoryBot.build(:user)
+    FactoryBot.create(:user,
+      email:      "aaron@example.com"
+    )
+    user = FactoryBot.build(:user,
+      email:      "aaron@example.com",
+    )
+    # FactoryBot.create(:user)
+    # user = FactoryBot.build(:user)
     user.valid?
     expect(user.errors[:email]).to include("has already been taken")
   end
