@@ -1,6 +1,13 @@
 require 'rails_helper'
+
 # 遅延ステータス
 describe "late status" do
+  # たくさんのメモが付いていること
+  it "can have many notes" do
+    project = FactoryBot.create(:project, :with_notes)
+    expect(project.notes.length).to eq 5
+  end
+  
   # 締め切り日が過ぎていれば遅延していること
   it "is late when the due date is past today" do
     project = FactoryBot.create(:project, :due_yesterday)
