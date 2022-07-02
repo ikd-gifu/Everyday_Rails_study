@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :project do
-    sequence(:name) { |n| "Project #{n}" }
-    description { "A test project." }
+    sequence(:name) { |n| "Test Project #{n}" }
+    description { "Sample project for testing purpose." }
     due_on { 1.week.from_now }
     association :owner
 
@@ -19,6 +19,11 @@ FactoryBot.define do
 
     trait :due_tomorrow do
       due_on { 1.day.from_now }
+    end
+    
+    # 無効になっている
+    trait :invalid do
+      name { nil }
     end
 
     # Factory inheritance examples ...
